@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriSense AI | Smart Agriculture Intelligence Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+
+    <div class="bg-grid"></div>
+    <div class="bg-glow green"></div>
+    <div class="bg-glow blue"></div>
+
+    <!-- HERO SECTION -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="live-pill">
+                <span class="live-dot"></span>
+                DIGITAL TWIN ONLINE
+            </div>
+
+            <h1>
+                TerraPulse AI
+            </h1>
+
+            <p class="hero-subtitle">
+                Smart Agriculture Intelligence Platform
+            </p>
+
+            <p class="hero-description">
+                Real-Time Monitoring • Predictive Insights • Smart Irrigation • Digital Twin Analytics
+            </p>
+
+            <div class="timestamp-card">
+
+                <span>Last Updated</span>
+
+                <strong id="timestamp">
+                    Loading...
+                </strong>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- SYSTEM STATUS -->
+
+    <section class="status-strip">
+
+        <div class="status-box">
+
+            <span class="status-label">
+                Sensors Online
+            </span>
+
+            <span class="status-value">
+                5 / 5
+            </span>
+
+        </div>
+
+        <div class="status-box">
+
+            <span class="status-label">
+                Digital Twin
+            </span>
+
+            <span class="status-value success">
+                LIVE
+            </span>
+
+        </div>
+
+        <div class="status-box">
+
+            <span class="status-label">
+                Analytics Engine
+            </span>
+
+            <span class="status-value success">
+                ACTIVE
+            </span>
+
+        </div>
+
+        <div class="status-box">
+
+            <span class="status-label">
+                Irrigation System
+            </span>
+
+            <span class="status-value" id="pumpStatusBanner">
+                ACTIVE
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- KPI + COMMAND CENTER -->
+
+    <section class="top-layout">
+
+        <div class="kpi-panel">
+
+            <!-- Crop Health -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-header">
+
+                    <span>Crop Health</span>
+
+                    <span class="chip success-chip">
+                        HEALTH
+                    </span>
+
+                </div>
+
+                <h2 id="cropHealth">
+                    --
+                </h2>
+
+                <p class="kpi-label">
+                    Overall Farm Condition
+                </p>
+
+            </div>
+
+            <!-- Risk -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-header">
+
+                    <span>Risk Score</span>
+
+                    <span class="chip warning-chip">
+                        RISK
+                    </span>
+
+                </div>
+
+                <h2 id="riskScore">
+                    --
+                </h2>
+
+                <p class="kpi-label">
+                    Environmental Risk
+                </p>
+
+            </div>
+
+            <!-- Water Efficiency -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-header">
+
+                    <span>Water Efficiency</span>
+
+                    <span class="chip info-chip">
+                        WATER
+                    </span>
+
+                </div>
+
+                <h2 id="waterEfficiency">
+                    --
+                </h2>
+
+                <p class="kpi-label">
+                    Irrigation Efficiency
+                </p>
+
+            </div>
+
+            <!-- Pump -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-header">
+
+                    <span>Irrigation</span>
+
+                    <span class="chip purple-chip">
+                        PUMP
+                    </span>
+
+                </div>
+
+                <h2 id="pumpStatus">
+                    --
+                </h2>
+
+                <p class="kpi-label">
+                    Current Pump State
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- AI COMMAND CENTER -->
+
+        <div class="command-center">
+
+            <div class="command-top">
+
+                <span class="ai-badge">
+                    AI DECISION ENGINE
+                </span>
+
+                <span class="confidence-badge">
+                    92% Confidence
+                </span>
+
+            </div>
+
+            <h3>
+                AI Command Center
+            </h3>
+
+            <p id="recommendation">
+                Loading recommendation...
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- SENSOR MATRIX -->
+
+    <section class="sensor-matrix">
+
+        <div class="sensor-card">
+
+            <span class="sensor-title">
+                TEMPERATURE
+            </span>
+
+            <h2 id="temperature">
+                --
+            </h2>
+
+            <span class="sensor-tag">
+                LIVE SENSOR
+            </span>
+
+        </div>
+
+        <div class="sensor-card">
+
+            <span class="sensor-title">
+                HUMIDITY
+            </span>
+
+            <h2 id="humidity">
+                --
+            </h2>
+
+            <span class="sensor-tag">
+                LIVE SENSOR
+            </span>
+
+        </div>
+
+        <div class="sensor-card">
+
+            <span class="sensor-title">
+                SOIL MOISTURE
+            </span>
+
+            <h2 id="soil">
+                --
+            </h2>
+
+            <span class="sensor-tag">
+                LIVE SENSOR
+            </span>
+
+        </div>
+
+        <div class="sensor-card">
+
+            <span class="sensor-title">
+                LIGHT INTENSITY
+            </span>
+
+            <h2 id="light">
+                --
+            </h2>
+
+            <span class="sensor-tag">
+                LIVE SENSOR
+            </span>
+
+        </div>
+
+        <div class="sensor-card">
+
+            <span class="sensor-title">
+                WATER LEVEL
+            </span>
+
+            <h2 id="water">
+                --
+            </h2>
+
+            <span class="sensor-tag">
+                LIVE SENSOR
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- CHARTS -->
+
+    <section class="chart-layout">
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <h3>
+                    Soil Moisture Trend
+                </h3>
+
+                <span class="live-tag">
+                    LIVE
+                </span>
+
+            </div>
+
+            <canvas id="soilChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <h3>
+                    Temperature Trend
+                </h3>
+
+                <span class="live-tag">
+                    LIVE
+                </span>
+
+            </div>
+
+            <canvas id="tempChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- ACTIVITY + ALERTS -->
+
+    <section class="bottom-layout">
+
+        <div class="activity-card">
+
+            <div class="section-header">
+
+                <h3>
+                    System Activity
+                </h3>
+
+            </div>
+
+            <div id="activityFeed">
+
+            </div>
+
+        </div>
+
+        <div class="alert-card">
+
+            <div class="section-header">
+
+                <h3>
+                    Alert Center
+                </h3>
+
+            </div>
+
+            <div id="alertsContainer">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Project JS -->
+
+    <script src="js/charts.js"></script>
+    <script src="js/alerts.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

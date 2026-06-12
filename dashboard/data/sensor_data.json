@@ -1,0 +1,18 @@
+{
+    "timestamp": "2026-06-12 09:57:47",
+    "temperature": 21,
+    "humidity": 20,
+    "soil_moisture": 1,
+    "light_intensity": 945,
+    "water_level": 1,
+    "crop_health": 24.0,
+    "risk_score": 70,
+    "water_efficiency": 30,
+    "pump_status": "ACTIVE",
+    "alerts": [
+        "Water Stress Detected",
+        "Low Reservoir Level",
+        "Low Humidity Warning"
+    ],
+    "recommendation": "Soil moisture is critically low. Activate irrigation immediately."
+}
